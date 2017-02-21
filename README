@@ -4,4 +4,10 @@ sniekum@willowgarage.com
 sniekum@cs.umass.edu
 
 
+Alex Brinkman's Comments:
+
+I modified the IndividualMarkers and IndividualMarkersNoKinect nodes to publish constant names "ar_marker"
+
+I find that the pose estimate using the IndividualMarkers node to be more stable than the Kinect-enabled version so I recommend using the roman_asus_indiv_no_kinect.launch (and eventually the sbpl_pr2_indiv_no_kinect.launch once it's added)
+
 

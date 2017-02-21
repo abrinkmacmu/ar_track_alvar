@@ -392,11 +392,12 @@ void getPointCloudCallback (const sensor_msgs::PointCloud2ConstPtr &msg)
       tf::Transform markerPose = t * m; // marker pose in the camera frame
 
 	  //Publish the transform from the camera to the marker
-	  std::string markerFrame = "ar_marker_";
+	  //std::string markerFrame = "ar_marker_";
+    std::string markerFrame = "ar_marker";
 	  std::stringstream out;
 	  out << id;
 	  std::string id_string = out.str();
-	  markerFrame += id_string;
+	  //markerFrame += id_string;
 	  tf::StampedTransform camToMarker (t, image_msg->header.stamp, image_msg->header.frame_id, markerFrame.c_str());
 	  tf_broadcaster->sendTransform(camToMarker);
 
